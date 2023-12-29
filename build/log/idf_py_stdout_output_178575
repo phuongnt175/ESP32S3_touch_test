@@ -1,0 +1,1012 @@
+��������[0m�ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e04
+entry 0x403c9908
+[0;32mI (27) boot: ESP-IDF v5.1.2-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Dec 28 2023 15:56:46[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.1[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0a710h ( 42768) map[0m
+[0;32mI (107) esp_image: segment 1: paddr=0001a738 vaddr=3fc91800 size=028ach ( 10412) load[0m
+[0;32mI (110) esp_image: segment 2: paddr=0001cfec vaddr=40374000 size=0302ch ( 12332) load[0m
+[0;32mI (119) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=196a8h (104104) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000396d0 vaddr=4037702c size=0a778h ( 42872) load[0m
+[0;32mI (159) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (159) boot: Disabling RNG early entropy source...[0m
+[0;32mI (171) cpu_start: Multicore app[0m
+[0;32mI (171) cpu_start: Pro cpu up.[0m
+[0;32mI (171) cpu_start: Starting app cpu, entry point is 0x403752a0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) cpu_start: Application information:[0m
+[0;32mI (192) cpu_start: Project name:     ESP32S3_test_touch_v2[0m
+[0;32mI (199) cpu_start: App version:      1[0m
+[0;32mI (203) cpu_start: Compile time:     Dec 28 2023 15:56:40[0m
+[0;32mI (209) cpu_start: ELF file SHA256:  60a37e4214a7cf71...[0m
+[0;32mI (215) cpu_start: ESP-IDF:          v5.1.2-dirty[0m
+[0;32mI (220) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (225) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (230) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (235) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (242) heap_init: At 3FC94910 len 00054E00 (339 KiB): DRAM[0m
+[0;32mI (248) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (255) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (261) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (268) spi_flash: detected chip: generic[0m
+[0;32mI (272) spi_flash: flash io: dio[0m
+[0;33mW (276) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (289) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (296) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (303) app_start: Starting scheduler on CPU0[0m
+[0;32mI (308) app_start: Starting scheduler on CPU1[0m
+[0;32mI (308) main_task: Started on CPU0[0m
+[0;32mI (318) main_task: Calling app_main()[0m
+[0;32mI (318) Touch pad: Initializing touch pad[0m
+[0;32mI (328) Touch pad: Denoise function init[0m
+[0;32mI (328) Touch pad: touch pad filter init[0m
+[0;32mI (338) main_task: Returned from app_main()[0m
+[0;32mI (388) Touch pad: touch pad [14] base 40820, thresh 81[0m
+[0;32mI (388) Touch pad: touch pad [2] base 35556, thresh 71[0m
+[0;32mI (388) Touch pad: touch pad [13] base 41337, thresh 82[0m
+[0;32mI (388) Touch pad: touch pad [5] base 32680, thresh 65[0m
+40832,35586,41333,32674,
+40852,35595,41337,32665,
+40837,35581,41361,32684,
+40862,35598,41356,32674,
+40836,35603,41368,32704,
+40858,35576,41367,32695,
+40866,35597,41341,32675,
+40839,35608,41379,32687,
+40865,35597,41365,32688,
+40858,35586,41362,32688,
+40855,35596,41343,32671,
+40858,35604,41357,32689,
+40849,35578,41346,32675,
+40857,35603,41345,32808,
+[0;32mI (3038) Touch pad: TouchSensor [5] be activated, status mask 0x32[0m
+40850,35594,41341,32870,
+40852,35597,41352,32999,
+40859,35587,41375,32910,
+40846,35596,41335,33215,
+40866,35602,41341,32899,
+40836,35611,41353,33352,
+[0;32mI (4428) Touch pad: TouchSensor [5] be inactivated, status mask 0x0[0m
+40849,35577,41357,32732,
+40855,35599,41367,32680,
+40853,35598,41361,32694,
+40839,35594,41359,32696,
+40853,35621,41343,32695,
+40868,35636,41361,32676,
+[0;32mI (5528) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40853,35798,41339,32679,
+[0;32mI (5708) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40863,35621,41347,32696,
+40834,35632,41352,32693,
+[0;32mI (6128) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40847,35828,41359,32691,
+[0;32mI (6368) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40842,35639,41339,32674,
+40839,35645,41341,32697,
+40859,35638,41361,32691,
+40858,35668,41356,32694,
+40864,35694,41363,32700,
+40852,35765,41355,32696,
+[0;32mI (7618) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40844,35749,41340,32698,
+[0;32mI (7678) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+[0;32mI (7728) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40848,35830,41337,32697,
+40854,35808,41350,32684,
+[0;32mI (8088) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40874,35646,41367,32696,
+40861,35659,41345,32698,
+40861,35719,41351,32681,
+40859,35744,41349,32685,
+40876,35787,41366,32706,
+[0;32mI (9108) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+[0;32mI (9158) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40836,35784,41361,32705,
+40854,35786,41364,32684,
+[0;32mI (9448) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40854,35838,41349,32708,
+40831,35815,41351,32696,
+[0;32mI (10028) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40837,35745,41352,32696,
+40844,35649,41357,32689,
+40854,35688,41356,32693,
+[0;32mI (10538) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+[0;32mI (10588) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40835,35722,41353,32696,
+[0;32mI (10668) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40874,35828,41356,32698,
+40848,35696,41336,32678,
+[0;32mI (11038) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40850,35621,41342,32677,
+40853,35684,41339,32681,
+40858,35706,41337,32677,
+40832,35721,41357,32693,
+40848,35745,41348,32691,
+40834,35759,41330,32678,
+40852,35790,41353,32696,
+40856,35787,41335,32695,
+40838,35855,41352,32700,
+40830,35874,41328,32700,
+40844,35913,41341,32680,
+40828,35773,41340,32696,
+40833,35629,41340,32675,
+40860,35673,41332,32674,
+[0;32mI (14008) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40834,35713,41332,32694,
+[0;32mI (14058) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+[0;32mI (14118) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40832,35802,41347,32702,
+40823,35740,41345,32694,
+[0;32mI (14468) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40844,35636,41362,32674,
+40846,35634,41336,32671,
+40833,35630,41368,32694,
+40828,35626,41401,32676,
+40851,35638,41444,32698,
+[0;32mI (15548) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40841,35637,41580,32687,
+40851,35632,41613,32696,
+40863,35638,41636,32703,
+40838,35641,41684,32707,
+40857,35637,41562,32705,
+[0;32mI (16468) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40857,35628,41365,32696,
+40849,35629,41454,32697,
+[0;32mI (16958) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40866,35641,41535,32698,
+40859,35634,41611,32705,
+40871,35637,41595,32703,
+40865,35637,41630,32707,
+40857,35641,41586,32688,
+40870,35636,41604,32703,
+40865,35634,41607,32710,
+40871,35643,41620,32710,
+40849,35645,41631,32707,
+[0;32mI (18698) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40868,35644,41379,32695,
+40852,35643,41377,32697,
+40839,35638,41353,32696,
+40854,35644,41391,32712,
+40857,35631,41373,32680,
+40860,35646,41373,32701,
+40858,35631,41383,32696,
+40865,35649,41355,32717,
+40858,35643,41374,32716,
+40839,35647,41351,32684,
+40857,35666,41370,32698,
+40859,35670,41353,32680,
+40860,35700,41377,32702,
+40850,35716,41369,32717,
+40833,35727,41371,32701,
+40854,35778,41372,32700,
+40836,35777,41349,32683,
+40833,35777,41347,32694,
+40827,35792,41348,32695,
+40845,35824,41346,32683,
+40860,35851,41360,32690,
+40849,35639,41353,32682,
+40832,35631,41370,32700,
+40849,35669,41376,32699,
+40852,35725,41358,32685,
+40834,35744,41352,32681,
+40850,35778,41360,32676,
+40846,35627,41347,32679,
+40838,35649,41351,32700,
+[0;32mI (24588) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40830,35715,41373,32698,
+40860,35726,41365,32682,
+40844,35711,41376,32702,
+40854,35735,41368,32708,
+40849,35746,41350,32683,
+40849,35745,41372,32707,
+[0;32mI (25728) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40841,35588,41347,32672,
+40853,35591,41365,32682,
+40835,35631,41362,32696,
+40843,35683,41373,32703,
+40849,35702,41355,32682,
+40866,35752,41372,32702,
+40859,35765,41375,32687,
+40856,35751,41370,32694,
+[0;32mI (27388) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40856,35818,41355,32698,
+40862,35838,41358,32682,
+40831,35826,41366,32694,
+[0;32mI (27908) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40840,35633,41361,32683,
+40854,35650,41358,32693,
+40848,35676,41358,32704,
+40845,35714,41376,32700,
+40839,35716,41357,32682,
+40842,35720,41370,32699,
+40852,35723,41368,32678,
+40854,35740,41369,32679,
+40861,35762,41386,32689,
+40842,35753,41367,32687,
+40857,35767,41381,32693,
+40859,35800,41369,32701,
+40835,35817,41371,32704,
+40832,35826,41363,32686,
+40854,35834,41370,32702,
+40856,35864,41360,32688,
+40858,35869,41369,32688,
+40849,35900,41377,32685,
+40858,35902,41377,32688,
+40844,35969,41373,32685,
+[0;32mI (31938) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+[0;32mI (31988) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40862,35969,41374,32691,
+40855,35975,41379,32694,
+[0;32mI (32268) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+[0;32mI (32318) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40857,35981,41362,32689,
+40833,35856,41376,32691,
+40840,35670,41378,32699,
+40835,35680,41373,32684,
+40830,35725,41376,32708,
+40848,35773,41375,32692,
+40838,35790,41358,32691,
+[0;32mI (33658) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40819,35814,41352,32690,
+40852,35830,41358,32689,
+40836,35781,41369,32705,
+[0;32mI (34238) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40846,35600,41359,32693,
+40843,35610,41376,32703,
+40859,35605,41369,32681,
+40849,35591,41371,32686,
+40858,35593,41374,32684,
+40866,35588,41391,32705,
+40880,35608,41403,32714,
+40886,35605,41404,32708,
+40943,35601,41388,32693,
+41028,35614,41429,32691,
+[0;32mI (36248) Touch pad: TouchSensor [14] be activated, status mask 0x16384[0m
+41158,35614,41399,32689,
+41247,35623,41395,32687,
+41567,35609,41414,32708,
+45297,35608,41431,32696,
+41206,35609,41416,32705,
+41074,35621,41424,32706,
+41917,35630,41452,32709,
+[0;32mI (37818) Touch pad: TouchSensor [14] be inactivated, status mask 0x0[0m
+40968,35599,41406,32710,
+[0;32mI (38008) Touch pad: TouchSensor [14] be activated, status mask 0x16384[0m
+40999,35605,41418,32693,
+[0;32mI (38058) Touch pad: TouchSensor [14] be inactivated, status mask 0x0[0m
+[0;32mI (38138) Touch pad: TouchSensor [14] be activated, status mask 0x16384[0m
+41101,35609,41418,32713,
+[0;32mI (38358) Touch pad: TouchSensor [14] be inactivated, status mask 0x0[0m
+40956,35616,41395,32695,
+41045,35613,41409,32710,
+[0;32mI (38708) Touch pad: TouchSensor [14] be activated, status mask 0x16384[0m
+41167,35598,41410,32696,
+[0;32mI (38908) Touch pad: TouchSensor [14] be inactivated, status mask 0x0[0m
+40909,35606,41385,32713,
+40923,35607,41401,32694,
+40924,35613,41405,32692,
+40932,35604,41391,32698,
+41014,35611,41422,32691,
+40925,35601,41386,32695,
+40923,35600,41407,32704,
+40913,35603,41390,32704,
+40923,35605,41392,32687,
+40918,35609,41410,32704,
+40895,35606,41383,32708,
+40899,35613,41399,32704,
+40896,35618,41387,32685,
+40895,35601,41400,32702,
+40864,35608,41381,32685,
+40903,35594,41376,32684,
+40890,35585,41385,32691,
+40892,35612,41374,32687,
+40909,35614,41397,32684,
+40889,35608,41394,32703,
+40884,35610,41399,32704,
+40877,35600,41377,32688,
+40891,35614,41377,32690,
+40896,35595,41399,32682,
+40887,35597,41368,32686,
+40877,35608,41369,32708,
+40888,35619,41369,32687,
+40909,35613,41381,32686,
+40892,35605,41372,32687,
+40885,35598,41376,32682,
+40884,35611,41370,32697,
+40888,35607,41371,32687,
+40906,35620,41383,32687,
+40906,35605,41390,32688,
+40882,35605,41385,32700,
+40885,35594,41368,32679,
+40898,35613,41370,32679,
+40880,35604,41365,32681,
+40880,35607,41380,32682,
+40890,35611,41391,32707,
+40896,35616,41381,32686,
+40882,35602,41372,32685,
+40898,35606,41385,32681,
+40878,35602,41362,32704,
+40893,35594,41366,32682,
+40876,35609,41388,32694,
+40883,35594,41387,32683,
+40903,35601,41371,32697,
+40877,35595,41345,32682,
+40900,35607,41386,32699,
+40910,35613,41367,32701,
+40895,35602,41389,32691,
+40889,35614,41368,32684,
+40879,35607,41382,32699,
+40901,35615,41368,32684,
+40896,35620,41398,32710,
+40893,35622,41451,32711,
+[0;32mI (50328) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40909,35605,41492,32712,
+[0;32mI (50458) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40903,35617,41444,32716,
+[0;32mI (50758) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40900,35620,41483,32716,
+[0;32mI (50838) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40897,35610,41480,32716,
+[0;32mI (51108) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (51188) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40907,35607,41454,32718,
+[0;32mI (51398) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40902,35618,41656,32705,
+[0;32mI (51538) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40891,35611,41507,32697,
+[0;32mI (51688) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (51768) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40890,35603,41464,32722,
+[0;32mI (51978) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40912,35620,41658,32721,
+[0;32mI (52118) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40921,35630,41584,32718,
+[0;32mI (52238) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (52358) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40907,35626,41485,32712,
+[0;32mI (52488) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (52618) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40907,35612,41500,32720,
+[0;32mI (52748) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (52818) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40897,35594,41512,32717,
+[0;32mI (52998) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40903,35615,41523,32713,
+[0;32mI (53048) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40887,35605,41577,32714,
+[0;32mI (53248) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (53298) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40887,35620,41430,32715,
+40893,35611,41402,32700,
+40898,35610,41432,32714,
+40914,35613,41399,32706,
+40892,35608,41395,32709,
+40897,35610,41388,32707,
+40898,35612,41454,32714,
+40898,35604,41473,32725,
+[0;32mI (54868) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (54958) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40899,35614,41442,32704,
+[0;32mI (55088) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (55168) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40910,35612,41450,32719,
+40884,35604,41401,32715,
+[0;32mI (55588) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40903,35609,41506,32705,
+[0;32mI (55638) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40910,35617,41480,32723,
+40885,35616,41458,32718,
+40906,35618,41441,32722,
+40904,35625,41481,32722,
+40886,35607,41478,32717,
+40899,35614,41402,32703,
+40885,35608,41386,32705,
+40903,35596,41385,32709,
+40884,35617,41381,32689,
+40882,35604,41390,32701,
+40905,35612,41388,32690,
+40902,35630,41384,32710,
+40897,35626,41387,32710,
+40902,35614,41376,32699,
+40896,35609,41414,32720,
+40899,35603,41458,32711,
+40890,35608,41505,32716,
+40892,35614,41462,32727,
+[0;32mI (59308) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40903,35619,41560,32734,
+[0;32mI (59478) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40903,35628,41441,32729,
+40902,35614,41478,32730,
+40901,35615,41510,32729,
+40903,35598,41525,32719,
+40886,35606,41541,32742,
+40898,35617,41538,32714,
+40900,35610,41611,32715,
+40881,35603,41467,32716,
+[0;32mI (61158) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40878,35606,41631,32735,
+[0;32mI (61278) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40888,35610,41594,32734,
+40885,35611,41562,32726,
+40887,35597,41476,32707,
+[0;32mI (61918) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40907,35621,41594,32719,
+40883,35610,41576,32719,
+40882,35609,41595,32711,
+40900,35597,41575,32706,
+40908,35611,41578,32707,
+40894,35604,41551,32728,
+[0;32mI (63128) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40888,35601,41516,32721,
+40904,35603,41535,32706,
+40883,35608,41502,32700,
+40880,35602,41423,32698,
+40880,35598,41440,32696,
+40897,35603,41460,32704,
+40882,35597,41473,32705,
+40887,35599,41485,32720,
+40902,35612,41480,32701,
+40892,35603,41495,32729,
+40888,35612,41496,32724,
+40901,35616,41392,32700,
+40897,35598,41407,32719,
+40924,35619,41399,32699,
+40910,35601,41396,32697,
+40924,35608,41426,32724,
+[0;32mI (66358) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40909,35597,41420,32712,
+[0;32mI (66438) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40905,35604,41470,32721,
+40915,35605,41509,32725,
+[0;32mI (66858) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (66908) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40894,35600,41404,32701,
+40920,35604,41401,32694,
+40909,35597,41402,32695,
+40909,35610,41399,32695,
+40891,35621,41399,32710,
+40889,35610,41383,32723,
+40905,35631,41398,32722,
+[0;32mI (68378) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40928,35856,41434,32727,
+[0;32mI (68488) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+[0;32mI (68588) Touch pad: TouchSensor [14] be activated, status mask 0x16384[0m
+41751,35722,41446,32748,
+[0;32mI (68638) Touch pad: TouchSensor [2] be activated, status mask 0x16388[0m
+41207,35817,41421,32736,
+41071,35803,41403,32732,
+[0;32mI (1828) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+41219,36191,41558,33532,
+[0;32mI (1878) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+[0;32mI (1968) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+�����b�����bj
+41116,36274,41550,33619,
+41165,36337,41557,33576,
+41150,36317,41552,33681,
+41165,36430,41549,33596,
+41172,36488,41547,33603,
+41154,106014,41522,33602,
+[0;32mI (3408) Touch pad: TouchSensor [5] be activated, status mask 0x36[0m
+41079,36056,41556,33739,
+[0;32mI (3468) Touch pad: TouchSensor [2] be inactivated, status mask 0x32[0m
+[0;32mI (3518) Touch pad: TouchSensor [5] be inactivated, status mask 0x0[0m
+41060,35881,41529,33563,
+[0;32mI (3738) Touch pad: TouchSensor [5] be activated, status mask 0x32[0m
+[0;32mI (3798) Touch pad: TouchSensor [5] be inactivated, status mask 0x0[0m
+41088,35900,41535,33628,
+41163,35934,41524,33651,
+[0;32mI (4088) Touch pad: TouchSensor [14] be activated, status mask 0x16384[0m
+[0;32mI (4148) Touch pad: TouchSensor [2] be activated, status mask 0x16388[0m
+[0;32mI (4198) Touch pad: TouchSensor [2] be inactivated, status mask 0x16384[0m
+41268,35955,41541,33607,
+[0;32mI (4298) Touch pad: TouchSensor [14] be inactivated, status mask 0x0[0m
+[0;32mI (4378) Touch pad: TouchSensor [5] be activated, status mask 0x32[0m
+[0;32mI (4428) Touch pad: TouchSensor [5] be inactivated, status mask 0x0[0m
+41064,35804,41541,33652,
+41079,35746,41508,33720,
+[0;32mI (4678) Touch pad: TouchSensor [5] be activated, status mask 0x32[0m
+[0;32mI (4728) Touch pad: TouchSensor [5] be inactivated, status mask 0x0[0m
+41081,35786,41534,33531,
+[0;32mI (4928) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+41075,36808,41538,33005,
+[0;32mI (5188) Touch pad: TouchSensor [5] be activated, status mask 0x36[0m
+41057,36747,41565,33383,
+41047,36751,41541,33362,
+41040,36681,41552,33478,
+41034,36719,41548,33436,
+41033,36638,41539,33491,
+41020,36879,41531,33499,
+41034,36833,41554,33484,
+[0;32mI (6578) Touch pad: TouchSensor [14] be activated, status mask 0x16420[0m
+[0;32mI (6628) Touch pad: TouchSensor [14] be inactivated, status mask 0x36[0m
+41084,36940,41532,33570,
+[0;32mI (6688) Touch pad: TouchSensor [14] be activated, status mask 0x16420[0m
+41324,36865,41529,33510,
+41251,36948,41526,33579,
+41265,36896,41518,33519,
+41298,36972,41533,33585,
+41319,36955,41552,33566,
+41364,37004,41535,33670,
+41262,36899,41520,33584,
+41434,36890,41542,33656,
+[0;32mI (8408) Touch pad: TouchSensor [14] be inactivated, status mask 0x36[0m
+41069,36828,41516,33607,
+[0;32mI (8628) Touch pad: TouchSensor [14] be activated, status mask 0x16420[0m
+41211,36958,41517,33682,
+41199,36991,41517,33585,
+[0;32mI (8918) Touch pad: TouchSensor [14] be inactivated, status mask 0x36[0m
+[0;32mI (8968) Touch pad: TouchSensor [14] be activated, status mask 0x16420[0m
+41214,36992,41517,33614,
+41147,37055,41513,33590,
+41367,37043,41546,33620,
+[0;32mI (9588) Touch pad: TouchSensor [14] be inactivated, status mask 0x36[0m
+41086,37139,41561,33625,
+41107,37170,41554,33793,
+[0;32mI (9978) Touch pad: TouchSensor [14] be activated, status mask 0x16420[0m
+41171,37511,41564,34312,
+[0;32mI (10038) Touch pad: TouchSensor [14] be inactivated, status mask 0x36[0m
+[0;32mI (10178) Touch pad: TouchSensor [13] be activated, status mask 0x8228[0m
+[0;32mI (10228) Touch pad: TouchSensor [13] be inactivated, status mask 0x36[0m
+41117,38134,41626,36284,
+[0;32mI (10428) Touch pad: TouchSensor [14] be activated, status mask 0x16420[0m
+41256,37703,41566,36422,
+[0;32mI (10478) Touch pad: TouchSensor [14] be inactivated, status mask 0x36[0m
+41056,37733,41496,33808,
+41063,37268,41500,33833,
+41060,37297,41499,33750,
+41107,37118,41492,33787,
+40990,37262,41496,33739,
+40998,37115,41480,33707,
+[0;32mI (11728) Touch pad: TouchSensor [14] be activated, status mask 0x16420[0m
+41260,37252,41496,33659,
+41201,37109,41484,33675,
+[0;32mI (12178) Touch pad: TouchSensor [14] be inactivated, status mask 0x36[0m
+41051,37213,41501,33626,
+40981,37055,41480,33662,
+40973,37220,41518,33612,
+40964,37077,41508,33640,
+40980,37229,41480,33613,
+40960,37083,41499,33650,
+40959,37194,41499,33624,
+40956,37080,41494,33613,
+[0;32mI (13708) Touch pad: TouchSensor [14] be activated, status mask 0x16420[0m
+47077,37235,41490,33599,
+[0;32mI (13908) Touch pad: TouchSensor [14] be inactivated, status mask 0x36[0m
+40979,37127,41495,33600,
+41104,37198,41474,33620,
+[0;32mI (14238) Touch pad: TouchSensor [14] be activated, status mask 0x16420[0m
+[0;32mI (14288) Touch pad: TouchSensor [14] be inactivated, status mask 0x36[0m
+41054,37088,41474,33633,
+41014,37185,41492,33647,
+40990,37103,41467,33610,
+41033,37241,41488,33705,
+41013,37182,41472,33649,
+41012,37298,41484,33696,
+41010,37195,41509,33646,
+41019,37282,41475,33696,
+41013,37226,41457,33648,
+41046,37320,41468,33684,
+41107,37457,41463,33687,
+[0;32mI (16498) Touch pad: TouchSensor [14] be activated, status mask 0x16420[0m
+41226,37803,41476,33781,
+[0;32mI (16638) Touch pad: Touch sensor channel 14 measure timeout. Skip this exception channel!![0m
+41387,37929,41485,33854,
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0xb (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e04
+entry 0x403c9908
+[0;32mI (27) boot: ESP-IDF v5.1.2-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Dec 28 2023 15:56:46[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.1[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0a710h ( 42768) map[0m
+[0;32mI (107) esp_image: segment 1: paddr=0001a738 vaddr=3fc91800 size=028ach ( 10412) load[0m
+[0;32mI (110) esp_image: segment 2: paddr=0001cfec vaddr=40374000 size=0302ch ( 12332) load[0m
+[0;32mI (119) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=196a8h (104104) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000396d0 vaddr=4037702c size=0a778h ( 42872) load[0m
+[0;32mI (159) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (159) boot: Disabling RNG early entropy source...[0m
+[0;32mI (171) cpu_start: Multicore app[0m
+[0;32mI (171) cpu_start: Pro cpu up.[0m
+[0;32mI (171) cpu_start: Starting app cpu, entry point is 0x403752a0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) cpu_start: Application information:[0m
+[0;32mI (192) cpu_start: Project name:     ESP32S3_test_touch_v2[0m
+[0;32mI (199) cpu_start: App version:      1[0m
+[0;32mI (203) cpu_start: Compile time:     Dec 28 2023 15:56:40[0m
+[0;32mI (209) cpu_start: ELF file SHA256:  60a37e4214a7cf71...[0m
+[0;32mI (215) cpu_start: ESP-IDF:          v5.1.2-dirty[0m
+[0;32mI (220) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (225) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (230) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (235) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (242) heap_init: At 3FC94910 len 00054E00 (339 KiB): DRAM[0m
+[0;32mI (248) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (255) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (261) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (268) spi_flash: detected chip: generic[0m
+[0;32mI (272) spi_flash: flash io: dio[0m
+[0;33mW (276) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (289) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (296) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (303) app_start: Starting scheduler on CPU0[0m
+[0;32mI (308) app_start: Starting scheduler on CPU1[0m
+[0;32mI (308) main_task: Started on CPU0[0m
+[0;32mI (318) main_task: Calling app_main()[0m
+[0;32mI (318) Touch pad: Initializing touch pad[0m
+[0;32mI (328) Touch pad: Denoise function init[0m
+[0;32mI (328) Touch pad: touch pad filter init[0m
+[0;32mI (338) main_task: Returned from app_main()[0m
+[0;32mI (388) Touch pad: touch pad [14] base 41023, thresh 82[0m
+[0;32mI (388) Touch pad: touch pad [2] base 37303, thresh 74[0m
+[0;32mI (388) Touch pad: touch pad [13] base 41480, thresh 82[0m
+[0;32mI (388) Touch pad: touch pad [5] base 33734, thresh 67[0m
+[0;32mI (408) Touch pad: TouchSensor [14] be activated, status mask 0x16384[0m
+41261,37366,41471,33874,
+[0;32mI (458) Touch pad: TouchSensor [2] be activated, status mask 0x16388[0m
+41606,37335,41462,33883,
+[0;32mI (638) Touch pad: TouchSensor [2] be inactivated, status mask 0x16384[0m
+41984,37209,41469,33771,
+[0;32mI (1008) Touch pad: TouchSensor [2] be activated, status mask 0x16388[0m
+41803,37488,41476,33866,
+[0;32mI (1098) Touch pad: TouchSensor [5] be activated, status mask 0x16420[0m
+41717,37370,41485,33848,
+[0;32mI (1288) Touch pad: TouchSensor [5] be inactivated, status mask 0x16388[0m
+42051,37406,41459,33822,
+42670,37646,41478,33845,
+42387,37728,41502,33719,
+[0;32mI (1938) Touch pad: TouchSensor [5] be activated, status mask 0x16420[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e04
+entry 0x403c9908
+[0;32mI (27) boot: ESP-IDF v5.1.2-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Dec 28 2023 15:56:46[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.1[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0a710h ( 42768) map[0m
+[0;32mI (107) esp_image: segment 1: paddr=0001a738 vaddr=3fc91800 size=028ach ( 10412) load[0m
+[0;32mI (110) esp_image: segment 2: paddr=0001cfec vaddr=40374000 size=0302ch ( 12332) load[0m
+[0;32mI (119) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=196a8h (104104) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000396d0 vaddr=4037702c size=0a778h ( 42872) load[0m
+[0;32mI (159) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (159) boot: Disabling RNG early entropy source...[0m
+[0;32mI (171) cpu_start: Multicore app[0m
+[0;32mI (171) cpu_start: Pro cpu up.[0m
+[0;32mI (171) cpu_start: Starting app cpu, entry point is 0x403752a0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) cpu_start: Application information:[0m
+[0;32mI (192) cpu_start: Project name:     ESP32S3_test_to�ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e04
+entry 0x403c9908
+[0;32mI (27) boot: ESP-IDF v5.1.2-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Dec 28 2023 15:56:46[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.1[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0a710h ( 42768) map[0m
+[0;32mI (107) esp_image: segment 1: paddr=0001a738 vaddr=3fc91800 size=028ach ( 10412) load[0m
+[0;32mI (110) esp_image: segment 2: paddr=0001cfec vaddr=40374000 size=0302ch ( 12332) load[0m
+[0;32mI (119) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=196a8h (104104) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000396d0 vaddr=4037702c size=0a778h ( 42872) load[0m
+[0;32mI (159) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (159) boot: Disabling RNG early entropy source...[0m
+[0;32mI (171) cpu_start: Multicore app[0m
+[0;32mI (171) cpu_start: Pro cpu up.[0m
+[0;32mI (171) cpu_start: Starting app cpu, entry point is 0x403752a0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) cpu_start: Application information:[0m
+[0;32mI (192) cpu_start: Project name:     ESP32S3_test_touch_v2[0m
+[0;32mI (199) cpu_start: App version:      1[0m
+[0;32mI (203) cpu_start: Compile time:     Dec 28 2023 15:56:40[0m
+[0;32mI (209) cpu_start: ELF file SHA256:  60a37e4214a7cf71...[0m
+[0;32mI (215) cpu_start: ESP-IDF:          v5.1.2-dirty[0m
+[0;32mI (220) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (225) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (230) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (235) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (242) heap_init: At 3FC94910 len 00054E00 (339 KiB): DRAM[0m
+[0;32mI (248) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (255) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (261) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (268) spi_flash: detected chip: generic[0m
+[0;32mI (272) spi_flash: flash io: dio[0m
+[0;33mW (276) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (289) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (296) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (303) app_start: Starting scheduler on CPU0[0m
+[0;32mI (308) app_start: Starting scheduler on CPU1[0m
+[0;32mI (308) main_task: Started on CPU0[0m
+[0;32mI (318) main_task: Calling app_main()[0m
+[0;32mI (318) Touch pad: Initializing touch pad[0m
+[0;32mI (328) Touch pad: Denoise function init[0m
+[0;32mI (328) Touch pad: touch pad filter init[0m
+[0;32mI (338) main_task: Returned from app_main()[0m
+[0;32mI (388) Touch pad: touch pad [14] base 41034, thresh 82[0m
+[0;32mI (388) Touch pad: touch pad [2] base 36760, thresh 73[0m
+[0;32mI (388) Touch pad: touch pad [13] base 41710, thresh 83[0m
+[0;32mI (388) Touch pad: touch pad [5] base 33677, thresh 67[0m
+[0;32mI (398) Touch pad: TouchSensor [14] be activated, status mask 0x16384[0m
+41489,36589,41698,33563,
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e04
+entry 0x403c9908
+[0;32mI (27) boot: ESP-IDF v5.1.2-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Dec 28 2023 15:56:46[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.1[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0a710h ( 42768) map[0m
+[0;32mI (107) esp_image: segment 1: paddr=0001a738 vaddr=3fc91800 size=028ach ( 10412) load[0m
+[0;32mI (110) esp_image: segment 2: paddr=0001cfec vaddr=40374000 size=0302ch ( 12332) load[0m
+[0;32mI (119) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=196a8h (104104) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000396d0 vaddr=4037702c size=0a778h ( 42872) load[0m
+[0;32mI (159) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (159) boot: Disabling RNG early entropy source...[0m
+[0;32mI (171) cpu_start: Multicore app[0m
+[0;32mI (171) cpu_start: Pro cpu up.[0m
+[0;32mI (171) cpu_start: Starting app cpu, entry point is 0x403752a0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) cpu_start: Application information:[0m
+[0;32mI (192) cpu_start: Project name:     ESP32S3_test_touch_v2[0m
+[0;32mI (199) cpu_start: App version:      1[0m
+[0;32mI (203) cpu_start: Compile time:     Dec 28 2023 15:56:40[0m
+[0;32mI (209) cpu_start: ELF file SHA256:  60a37e4214a7cf71...[0m
+[0;32mI (215) cpu_start: ESP-IDF:          v5.1.2-dirty[0m
+[0;32mI (220) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (225) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (230) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (235) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (242) heap_init: At 3FC94910 len 00054E00 (339 KiB): DRAM[0m
+[0;32mI (248) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (255) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (261) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (268) spi_flash: detected chip: generic[0m
+[0;32mI (272) spi_flash: flash io: dio[0m
+[0;33mW (276) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (289) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (296) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (303) app_start: Starting scheduler on CPU0[0m
+[0;32mI (308) app_start: Starting scheduler on CPU1[0m
+[0;32mI (308) main_task: Started on CPU0[0m
+[0;32mI (318) main_task: Calling app_main()[0m
+[0;32mI (318) Touch pad: Initializing touch pad[0m
+[0;32mI (328) Touch pad: Denoise function init[0m
+[0;32mI (328) Touch pad: touch pad filter init[0m
+[0;32mI (338) main_task: Returned from app_main()[0m
+[0;32mI (388) Touch pad: touch pad [14] base 41185, thresh 82[0m
+[0;32mI (388) Touch pad: touch pad [2] base 35652, thresh 71[0m
+[0;32mI (388) Touch pad: touch pad [13] base 41761, thresh 83[0m
+[0;32mI (388) Touch pad: touch pad [5] base 32844, thresh 65[0m
+41026,35669,41812,32836,
+41027,35674,41754,32844,
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e04
+entry 0x403c9908
+[0;32mI (27) boot: ESP-IDF v5.1.2-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Dec 28 2023 15:56:46[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.1[0m
+[0;32mI (34) boot.esp32s3: Boo�x:ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xf (BROWNOUT_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e04
+entry 0x403c9908
+[0;32mI (27) boot: ESP-IDF v5.1.2-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Dec 28 2023 15:56:46[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v0.1[0m
+[0;32mI (35) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (49) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (73) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (88) boot: End of partition table[0m
+[0;32mI (92) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0a710h ( 42768) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=0001a738 vaddr=3fc91800 size=028ach ( 10412) load[0m
+[0;32mI (111) esp_image: segment 2: paddr=0001cfec vaddr=40374000 size=0302ch ( 12332) load[0m
+[0;32mI (120) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=196a8h (104104) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000396d0 vaddr=4037702c size=0a778h ( 42872) load[0m
+[0;32mI (160) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (160) boot: Disabling RNG early entropy source...[0m
+[0;32mI (171) cpu_start: Multicore app[0m
+[0;32mI (171) cpu_start: Pro cpu up.[0m
+[0;32mI (172) cpu_start: Starting app cpu, entry point is 0x403752a0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (190) cpu_start: Pro cpu start user code[0m
+[0;32mI (190) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (190) cpu_start: Application information:[0m
+[0;32mI (193) cpu_start: Project name:     ESP32S3_test_touch_v2[0m
+[0;32mI (199) cpu_start: App version:      1[0m
+[0;32mI (203) cpu_start: Compile time:     Dec 28 2023 15:56:40[0m
+[0;32mI (209) cpu_start: ELF file SHA256:  60a37e4214a7cf71...[0m
+[0;32mI (215) cpu_start: ESP-IDF:          v5.1.2-dirty[0m
+[0;32mI (221) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (226) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (230) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (235) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (242) heap_init: At 3FC94910 len 00054E00 (339 KiB): DRAM[0m
+[0;32mI (249) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (255) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (261) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (269) spi_flash: detected chip: generic[0m
+[0;32mI (272) spi_flash: flash io: dio[0m
+[0;33mW (276) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (290) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (296) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (304) app_start: Starting scheduler on CPU0[0m
+[0;32mI (308) app_start: Starting scheduler on CPU1[0m
+[0;32mI (308) main_task: Started on CPU0[0m
+[0;32mI (318) main_task: Calling app_main()[0m
+[0;32mI (318) Touch pad: Initializing touch pad[0m
+[0;32mI (328) Touch pad: Denoise function init[0m
+[0;32mI (328) Touch pad: touch pad filter init[0m
+[0;32mI (338) main_task: Returned from app_main()[0m
+[0;32mI (388) Touch pad: touch pad [14] base 40859, thresh 81[0m
+[0;32mI (388) Touch pad: touch pad [2] base 35581, thresh 71[0m
+[0;32mI (388) Touch pad: touch pad [13] base 41366, thresh 82[0m
+[0;32mI (388) Touch pad: touch pad [5] base 32723, thresh 65[0m
+40871,35585,41345,32739,
+40873,35591,41360,32731,
+40871,35590,41355,32726,
+40860,35579,41348,32715,
+40860,35591,41326,32687,
+40863,35590,41349,32708,
+40863,35582,41369,32706,
+40858,35586,41343,32701,
+40853,35582,41362,32700,
+40867,35582,41355,32692,
+40855,35586,41348,32701,
+40866,35578,41340,32694,
+40868,35591,41352,32705,
+40854,35575,41338,32684,
+40843,35585,41339,32687,
+40844,35580,41334,32682,
+40867,35586,41338,32691,
+40849,35588,41335,32684,
+40851,35568,41328,32678,
+40846,35564,41335,32681,
+40836,35582,41336,32681,
+40839,35580,41341,32681,
+40845,35571,41353,32677,
+40841,35571,41336,32671,
+40837,35587,41351,32691,
+40851,35563,41343,32672,
+40818,35575,41345,32664,
+40846,35588,41348,32665,
+40830,35584,41327,32678,
+40852,35584,41345,32675,
+40820,35570,41345,32673,
+40844,35573,41345,32655,
+40828,35571,41345,32677,
+40829,35563,41328,32654,
+40830,35581,41336,32657,
+40841,35565,41329,32659,
+40835,35579,41337,32658,
+40840,35564,41329,32657,
+40828,35567,41325,32665,
+40824,35554,41340,32655,
+40813,35567,41308,32632,
+40833,35572,41325,32629,
+40843,35568,41349,32672,
+40818,35554,41296,32647,
+40823,35555,41343,32647,
+40822,35568,41324,32652,
+40836,35556,41325,32647,
+40832,35561,41336,32648,
+40817,35563,41324,32665,
+40847,35567,41326,32649,
+40833,35546,41322,32647,
+40835,35552,41341,32648,
+40817,35568,41315,32641,
+40834,35564,41342,32661,
+40821,35566,41324,32646,

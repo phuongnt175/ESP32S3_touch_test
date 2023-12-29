@@ -1,0 +1,729 @@
+�partiti�ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e04
+entry 0x403c9908
+[0;32mI (27) boot: ESP-IDF v5.1.2-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Dec 28 2023 15:56:46[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.1[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0a710h ( 42768) map[0m
+[0;32mI (107) esp_image: segment 1: paddr=0001a738 vaddr=3fc91800 size=028ach ( 10412) load[0m
+[0;32mI (110) esp_image: segment 2: paddr=0001cfec vaddr=40374000 size=0302ch ( 12332) load[0m
+[0;32mI (119) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=196a8h (104104) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000396d0 vaddr=4037702c size=0a778h ( 42872) load[0m
+[0;32mI (159) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (159) boot: Disabling RNG early entropy source...[0m
+[0;32mI (171) cpu_start: Multicore app[0m
+[0;32mI (171) cpu_start: Pro cpu up.[0m
+[0;32mI (171) cpu_start: Starting app cpu, entry point is 0x403752a0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) cpu_start: Application information:[0m
+[0;32mI (192) cpu_start: Project name:     ESP32S3_test_touch_v2[0m
+[0;32mI (199) cpu_start: App version:      1[0m
+[0;32mI (203) cpu_start: Compile time:     Dec 28 2023 15:56:40[0m
+[0;32mI (209) cpu_start: ELF file SHA256:  939cc2f6bf121167...[0m
+[0;32mI (215) cpu_start: ESP-IDF:          v5.1.2-dirty[0m
+[0;32mI (220) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (225) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (230) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (235) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (242) heap_init: At 3FC94910 len 00054E00 (339 KiB): DRAM[0m
+[0;32mI (248) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (255) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (261) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (268) spi_flash: detected chip: generic[0m
+[0;32mI (272) spi_flash: flash io: dio[0m
+[0;33mW (276) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (289) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (296) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (303) app_start: Starting scheduler on CPU0[0m
+[0;32mI (308) app_start: Starting scheduler on CPU1[0m
+[0;32mI (308) main_task: Started on CPU0[0m
+[0;32mI (318) main_task: Calling app_main()[0m
+[0;32mI (318) Touch pad: Initializing touch pad[0m
+[0;32mI (328) Touch pad: Denoise function init[0m
+[0;32mI (328) Touch pad: touch pad filter init[0m
+[0;32mI (338) main_task: Returned from app_main()[0m
+[0;32mI (388) Touch pad: touch pad [14] base 40851, thresh 40[0m
+[0;32mI (388) Touch pad: touch pad [2] base 35575, thresh 35[0m
+[0;32mI (388) Touch pad: touch pad [13] base 41367, thresh 41[0m
+[0;32mI (388) Touch pad: touch pad [5] base 32680, thresh 32[0m
+40884,35578,41380,32695,
+40887,35590,41358,32680,
+40869,35596,41377,32696,
+40886,35593,41365,32694,
+40902,35596,41374,32695,
+40886,35601,41396,32698,
+40905,35594,41392,32694,
+40887,35598,41375,32699,
+40894,35610,41358,32699,
+40889,35601,41383,32684,
+40880,35606,41358,32712,
+40871,35597,41348,32696,
+40874,35593,41384,32691,
+40876,35609,41369,32690,
+40873,35593,41378,32693,
+40870,35595,41365,32677,
+40853,35590,41371,32697,
+40874,35593,41367,32683,
+40870,35605,41349,32679,
+40869,35573,41368,32690,
+40862,35589,41354,32675,
+40856,35603,41369,32697,
+40875,35594,41356,32680,
+40854,35602,41366,32733,
+[0;32mI (5068) Touch pad: TouchSensor [5] be activated, status mask 0x32[0m
+40874,35594,41385,32753,
+40865,35589,41363,32769,
+40856,35601,41390,32834,
+40874,35589,41386,32907,
+40871,35583,41387,33003,
+40852,35578,41383,33040,
+40879,35596,41386,33171,
+40857,35597,41386,33262,
+40872,35602,41390,33088,
+[0;32mI (6958) Touch pad: TouchSensor [5] be inactivated, status mask 0x0[0m
+40875,35585,41387,32695,
+40861,35613,41382,32713,
+40878,35598,41391,32696,
+40897,35606,41379,32719,
+40860,35600,41358,32711,
+[0;32mI (8008) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40872,35655,41382,32718,
+[0;32mI (8228) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40864,35634,41364,32694,
+40859,35596,41378,32711,
+40875,35589,41376,32696,
+40862,35599,41365,32687,
+[0;32mI (8978) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40872,35681,41368,32707,
+40876,35679,41383,32684,
+[0;32mI (9418) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40851,35633,41350,32701,
+40874,35616,41375,32691,
+[0;32mI (9758) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+[0;32mI (9808) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40883,35620,41373,32699,
+40866,35597,41363,32688,
+40857,35592,41354,32697,
+40871,35601,41371,32701,
+40886,35593,41366,32677,
+40852,35586,41364,32693,
+40868,35590,41347,32676,
+40866,35590,41361,32694,
+40867,35597,41374,32676,
+40870,35622,41351,32682,
+40876,35632,41363,32695,
+40852,35646,41345,32679,
+[0;32mI (12198) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40875,35686,41349,32679,
+40858,35652,41341,32678,
+[0;32mI (12448) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40866,35627,41364,32694,
+40856,35654,41342,32677,
+[0;32mI (13028) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40845,35680,41356,32677,
+[0;32mI (13078) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+[0;32mI (13138) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+[0;32mI (13208) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40861,35653,41342,32682,
+40862,35650,41353,32694,
+[0;32mI (13618) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40843,35666,41342,32681,
+[0;32mI (13668) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40846,35599,41341,32672,
+40855,35646,41368,32696,
+[0;32mI (14038) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40843,35653,41342,32670,
+40851,35673,41352,32659,
+40863,35717,41367,32699,
+[0;32mI (14788) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40848,35633,41364,32687,
+[0;32mI (14898) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+[0;32mI (14948) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40867,35625,41350,32674,
+40853,35632,41344,32694,
+40863,35596,41373,32669,
+40850,35588,41355,32688,
+40873,35609,41347,32674,
+40853,35620,41367,32689,
+40879,35593,41356,32672,
+40879,35626,41366,32712,
+[0;32mI (16578) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40875,35699,41361,32692,
+40884,35674,41366,32691,
+40864,35674,41362,32715,
+40869,35683,41361,32691,
+40851,35666,41368,32690,
+40871,35617,41361,32685,
+[0;32mI (17638) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40880,35622,41362,32690,
+40891,35620,41369,32696,
+40850,35634,41341,32691,
+40865,35623,41363,32691,
+[0;32mI (18618) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40870,35611,41353,32677,
+[0;32mI (18668) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40875,35645,41358,32694,
+[0;32mI (18848) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+[0;32mI (19018) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40879,35633,41367,32690,
+40867,35630,41361,32686,
+40866,35619,41372,32693,
+[0;32mI (19538) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+[0;32mI (19588) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40858,35635,41352,32678,
+40846,35608,41342,32687,
+40865,35594,41365,32676,
+40876,35621,41367,32676,
+[0;32mI (20348) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40848,35678,41354,32691,
+[0;32mI (20548) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40859,35637,41367,32689,
+[0;32mI (20788) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40867,35699,41345,32680,
+[0;32mI (20908) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40865,35613,41380,32704,
+[0;32mI (21168) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40860,35712,41346,32694,
+[0;32mI (21358) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+[0;32mI (21428) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40866,35646,41366,32694,
+[0;32mI (21478) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+[0;32mI (21528) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40862,35626,41356,32694,
+40855,35655,41342,32675,
+[0;32mI (21868) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+[0;32mI (22008) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40869,35648,41345,32693,
+[0;32mI (22088) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40844,35610,41337,32674,
+40869,35640,41360,32694,
+[0;32mI (22458) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40870,35650,41382,32678,
+[0;32mI (22658) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+[0;32mI (22728) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+[0;32mI (22778) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+[0;32mI (22828) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40833,35675,41359,32694,
+40860,35649,41355,32676,
+40850,35688,41339,32691,
+[0;32mI (23388) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40848,35637,41363,32696,
+[0;32mI (23468) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+[0;32mI (23518) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40848,35626,41347,32697,
+40861,35642,41356,32686,
+40864,35593,41362,32694,
+40864,35648,41356,32679,
+[0;32mI (24258) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40861,35657,41346,32677,
+[0;32mI (24598) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40860,35658,41356,32692,
+[0;32mI (24648) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+[0;32mI (24698) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+[0;32mI (24758) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40871,35686,41359,32699,
+[0;32mI (24958) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40845,35629,41339,32701,
+40873,35640,41361,32702,
+40872,35647,41347,32673,
+[0;32mI (25588) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40865,35655,41368,32704,
+[0;32mI (25658) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+[0;32mI (25718) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40852,35700,41350,32696,
+40849,35698,41362,32700,
+40874,35642,41356,32695,
+[0;32mI (26238) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40876,35655,41383,32691,
+[0;32mI (26588) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40869,35647,41377,32697,
+[0;32mI (26638) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+[0;32mI (26698) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40868,35716,41363,32679,
+40865,35704,41365,32703,
+40875,35686,41354,32679,
+40871,35737,41368,32694,
+40875,35756,41381,32713,
+[0;32mI (27828) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40885,35668,41372,32699,
+40875,35647,41366,32697,
+40879,35633,41364,32690,
+40874,35636,41381,32698,
+40883,35651,41369,32689,
+40871,35656,41387,32698,
+[0;32mI (28888) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+[0;32mI (28938) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+[0;32mI (28988) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40854,35766,41345,32684,
+40871,35741,41365,32678,
+[0;32mI (29288) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40871,35641,41366,32690,
+[0;32mI (29628) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40874,35679,41370,32715,
+[0;32mI (29678) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+[0;32mI (29728) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40885,35683,41364,32701,
+[0;32mI (29878) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40873,35667,41372,32698,
+[0;32mI (30108) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+[0;32mI (30158) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40873,35620,41358,32699,
+40852,35641,41357,32683,
+40861,35600,41365,32694,
+40857,35620,41355,32696,
+40852,35587,41360,32696,
+40840,35591,41360,32694,
+40837,35631,41369,32697,
+[0;32mI (31508) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40844,35697,41365,32693,
+40849,35742,41369,32696,
+40847,35785,41362,32698,
+[0;32mI (32218) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40840,35627,41348,32698,
+[0;32mI (32398) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40864,35603,41367,32681,
+[0;32mI (32448) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40869,35612,41368,32704,
+40869,35601,41349,32675,
+40848,35614,41366,32692,
+40870,35604,41374,32693,
+40850,35641,41367,32697,
+[0;32mI (33468) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40869,35758,41386,32712,
+40884,35649,41385,32711,
+[0;32mI (33898) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40884,35651,41364,32687,
+40868,35619,41363,32692,
+40844,35628,41344,32693,
+[0;32mI (34548) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40861,35721,41366,32680,
+[0;32mI (34728) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40844,35601,41338,32692,
+40843,35581,41333,32670,
+40858,35602,41352,32685,
+40861,35606,41363,32681,
+[0;32mI (35508) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40857,35790,41344,32679,
+[0;32mI (35698) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40855,35621,41355,32690,
+40835,35633,41345,32679,
+40855,35651,41350,32675,
+[0;32mI (36298) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40861,35689,41354,32695,
+[0;32mI (36468) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40835,35597,41342,32690,
+40858,35585,41345,32677,
+40841,35676,41345,32673,
+[0;32mI (37038) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40856,35648,41355,32684,
+[0;32mI (37278) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40830,35621,41354,32687,
+40857,35653,41340,32673,
+[0;32mI (37698) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+[0;32mI (37748) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+[0;32mI (37798) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40840,35654,41356,32699,
+[0;32mI (37858) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40842,35643,41362,32691,
+40859,35637,41350,32674,
+40839,35648,41340,32693,
+[0;32mI (38528) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+[0;32mI (38618) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40856,35640,41345,32682,
+40861,35590,41346,32678,
+40844,35632,41352,32692,
+[0;32mI (39058) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40860,35637,41344,32672,
+[0;32mI (39268) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40866,35645,41368,32682,
+[0;32mI (39438) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+[0;32mI (39538) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40862,35613,41360,32696,
+[0;32mI (39788) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40858,35662,41348,32690,
+[0;32mI (39908) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40860,35631,41341,32680,
+[0;32mI (40048) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+[0;32mI (40118) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40859,35603,41356,32695,
+[0;32mI (40318) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+[0;32mI (40398) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40841,35632,41357,32699,
+[0;32mI (40518) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+[0;32mI (40618) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40847,35610,41340,32675,
+40843,35619,41361,32695,
+[0;32mI (40948) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+[0;32mI (41018) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40860,35630,41329,32674,
+[0;32mI (41108) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+[0;32mI (41178) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40844,35597,41370,32692,
+[0;32mI (41328) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+[0;32mI (41398) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40858,35632,41343,32676,
+40866,35625,41333,32690,
+40857,35635,41359,32697,
+40857,35621,41366,32700,
+[0;32mI (42188) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40863,35630,41998,32696,
+[0;32mI (42338) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40847,35612,41349,32681,
+[0;32mI (42528) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40842,35643,41453,32701,
+[0;32mI (42688) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40844,35626,41410,32708,
+[0;32mI (42848) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (42958) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40862,35629,41371,32684,
+[0;32mI (43178) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40858,35637,41608,32687,
+[0;32mI (43308) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40845,35623,41368,32680,
+[0;32mI (43518) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (43588) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40839,35623,41377,32696,
+40842,35630,41405,32679,
+[0;32mI (43858) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (43948) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40820,35629,41357,32675,
+[0;32mI (44178) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40868,35627,41475,32702,
+[0;32mI (44298) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40863,35639,41354,32682,
+[0;32mI (44538) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (44628) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40870,35621,41382,32700,
+40860,35631,41425,32687,
+[0;32mI (44848) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (44958) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40853,35633,41374,32680,
+40854,35630,41423,32679,
+[0;32mI (45258) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40864,35632,41494,32702,
+40853,35634,41497,32703,
+40844,35637,41506,32707,
+40872,35636,41503,32686,
+40853,35616,41522,32706,
+40844,35629,41517,32704,
+40867,35629,41533,32683,
+40861,35631,41524,32697,
+[0;32mI (46968) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40865,35635,41390,32696,
+40845,35627,41358,32672,
+40844,35624,41353,32685,
+40834,35606,41372,32672,
+40860,35617,41366,32677,
+40853,35631,41358,32691,
+40842,35634,41370,32690,
+40846,35612,41352,32674,
+40872,35636,41366,32677,
+40864,35613,41369,32671,
+40835,35619,41375,32686,
+40871,35632,41373,32669,
+40856,35616,41380,32684,
+40834,35617,41369,32674,
+40866,35638,41354,32673,
+40861,35614,41356,32675,
+40844,35625,41373,32689,
+40871,35629,41360,32695,
+40864,35617,41374,32680,
+40865,35636,41373,32675,
+40848,35624,41373,32696,
+40867,35627,41394,32677,
+40865,35619,41396,32700,
+40867,35632,41414,32686,
+[0;32mI (51718) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40855,35631,41545,32688,
+[0;32mI (51888) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40848,35623,41375,32695,
+40863,35626,41425,32682,
+[0;32mI (52268) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40864,35634,41445,32686,
+[0;32mI (52448) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40843,35628,41393,32686,
+[0;32mI (52688) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (52818) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40860,35588,41397,32693,
+40869,35634,41372,32704,
+[0;32mI (53128) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (53218) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40840,35623,41393,32696,
+40858,35627,41443,32704,
+[0;32mI (53438) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (53618) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40854,35587,41410,32699,
+40864,35639,41435,32707,
+[0;32mI (53848) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (54018) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40852,35617,41404,32707,
+[0;32mI (54198) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40861,35621,41475,32707,
+[0;32mI (54388) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40865,35631,41417,32704,
+[0;32mI (54618) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40853,35624,41472,32703,
+[0;32mI (54768) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40854,35631,41409,32702,
+[0;32mI (54988) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40864,35623,41460,32708,
+[0;32mI (55098) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40847,35631,41420,32710,
+[0;32mI (55328) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40863,35630,41446,32695,
+[0;32mI (55448) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40858,35638,41426,32694,
+[0;32mI (55678) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (55738) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40847,35624,41394,32709,
+[0;32mI (56008) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40859,35632,41495,32694,
+[0;32mI (56108) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40868,35632,41425,32686,
+[0;32mI (56348) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (56428) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40847,35610,41438,32691,
+40891,35630,41455,32716,
+[0;32mI (56678) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (56728) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40867,35640,41414,32696,
+[0;32mI (56978) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40874,35630,41442,32694,
+[0;32mI (57038) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40842,35625,41419,32709,
+[0;32mI (57278) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (57338) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40870,35627,41417,32710,
+[0;32mI (57548) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (57608) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40877,35636,41427,32699,
+40847,35621,41462,32712,
+40862,35642,41439,32704,
+[0;32mI (58078) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (58148) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40876,35633,41415,32700,
+[0;32mI (58338) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (58428) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40845,35624,41397,32701,
+[0;32mI (58618) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40867,35613,41512,32690,
+[0;32mI (58718) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40866,35632,41422,32693,
+[0;32mI (58888) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (58938) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40855,35634,41394,32683,
+[0;32mI (59168) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (59228) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40848,35639,41416,32703,
+[0;32mI (59418) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40867,35633,41448,32690,
+[0;32mI (59468) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40846,35619,41438,32688,
+[0;32mI (59658) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (59728) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40849,35619,41469,32698,
+[0;32mI (59878) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40848,35636,41455,32685,
+40858,35613,41464,32688,
+40852,35647,41457,32702,
+[0;32mI (60468) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40873,35637,41417,32689,
+[0;32mI (60708) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40849,35614,41534,32692,
+40844,35624,41500,32701,
+40844,35625,41534,32709,
+40871,35632,41537,32702,
+40873,35633,41551,32695,
+40866,35615,41509,32684,
+40864,35623,41518,32701,
+40872,35632,41520,32698,
+40872,35636,41508,32701,
+[0;32mI (62498) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40871,35631,41382,32680,
+40859,35620,41388,32699,
+40863,35631,41451,32682,
+[0;32mI (63068) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40878,35631,41521,32683,
+40869,35641,41530,32705,
+40842,35638,41555,32707,
+40865,35645,41546,32721,
+40847,35642,41530,32704,
+40847,35626,41521,32698,
+40867,35611,41563,32698,
+40864,35620,41583,32684,
+40885,35635,41603,32703,
+[0;32mI (64938) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40855,35611,41349,32673,
+40866,35633,41373,32675,
+40845,35624,41353,32673,
+40860,35635,41372,32678,
+40837,35637,41365,32688,
+40863,35683,41380,32683,
+[0;32mI (66078) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+[0;32mI (66128) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+[0;32mI (66228) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40864,35711,41379,32697,
+40844,35713,41368,32695,
+40861,35732,41369,32702,
+40865,35726,41386,32686,
+40852,35726,41354,32683,
+40837,35716,41366,32691,
+40866,35699,41376,32706,
+40848,35713,41380,32701,
+40849,35713,41374,32698,
+40867,35695,41372,32703,
+[0;32mI (68148) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40876,35655,41373,32677,
+40856,35637,41367,32701,
+40867,35632,41356,32673,
+40845,35644,41373,32691,
+40863,35625,41373,32678,
+40862,35669,41379,32714,
+[0;32mI (69298) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+[0;32mI (69348) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40861,35665,41379,32699,
+40873,35677,41393,32696,
+40869,35679,41361,32679,
+40864,35677,41374,32678,
+40853,35678,41348,32675,
+40856,35686,41368,32700,
+40852,35670,41355,32691,
+40860,35603,41378,32695,
+40864,35583,41379,32684,
+40861,35604,41368,32705,
+40836,35643,41365,32704,
+[0;32mI (71568) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40841,35692,41348,32688,
+40844,35716,41372,32695,
+40849,35705,41351,32681,
+40859,35661,41380,32679,
+[0;32mI (72278) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40842,35627,41369,32688,
+[0;32mI (72628) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40839,35659,41366,32692,
+[0;32mI (72678) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40843,35646,41355,32678,
+40855,35662,41370,32691,
+40870,35666,41362,32699,
+40856,35639,41373,32707,
+40841,35656,41370,32683,
+40845,35602,41367,32694,
+40836,35625,41364,32680,
+40841,35647,41371,32698,
+[0;32mI (74418) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+40859,35705,41353,32679,
+40840,35710,41357,32682,
+40841,35700,41351,32681,
+40842,35670,41348,32679,
+[0;32mI (75088) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40840,35628,41366,32676,
+40833,35632,41348,32673,
+40841,35674,41344,32676,
+[0;32mI (75638) Touch pad: TouchSensor [2] be activated, status mask 0x4[0m
+[0;32mI (75688) Touch pad: TouchSensor [2] be inactivated, status mask 0x0[0m
+40869,35638,41351,32682,
+40837,35661,41347,32681,
+40832,35654,41368,32679,
+40847,35650,41364,32684,
+40856,35664,41349,32679,
+40863,35657,41362,32677,
+40860,35681,41370,32697,
+40871,35595,41368,32676,
+40859,35603,41370,32692,
+40848,35594,41352,32677,
+40860,35576,41364,32678,
+40848,35584,41364,32675,
+40860,35605,41378,32676,
+40873,35617,41359,32690,
+40876,35606,41367,32674,
+40843,35587,41349,32674,
+40844,35593,41355,32675,
+40846,35591,41361,32695,
+40846,35600,41346,32699,
+40851,35599,41355,32698,
+40846,35589,41354,32682,
+40863,35602,41380,32705,
+40862,35601,41357,32680,
+40862,35605,41351,32672,
+40853,35606,41352,32669,
+40843,35601,41353,32692,
+40839,35592,41353,32669,
+40835,35590,41354,32673,
+40852,35606,41351,32673,
+40847,35610,41351,32685,
+40842,35594,41363,32663,
+40839,35603,41355,32687,
+40845,35593,41355,32670,
+40841,35596,41355,32674,
+40871,35612,41353,32675,
+40853,35604,41356,32672,
+40854,35593,41354,32680,
+40842,35601,41356,32689,
+40837,35600,41368,32671,
+40864,35608,41356,32674,
+40863,35605,41377,32686,
+40858,35611,41379,32687,
+40854,35608,41376,32683,
+40860,35610,41379,32671,
+40857,35605,41384,32691,
+40860,35616,41378,32688,
+40861,35622,41356,32676,
+40861,35609,41374,32670,
+40860,35605,41361,32692,
+40851,35604,41365,32674,
+40856,35593,41357,32688,
+40864,35611,41377,32690,
+40861,35603,41362,32687,
+40865,35615,41368,32686,
+40865,35615,41371,32689,
+40854,35594,41366,32691,
+40857,35614,41368,32673,
+40864,35609,41364,32673,
+40859,35614,41363,32677,
+40844,35589,41364,32678,
+40861,35606,41362,32673,
+40843,35585,41356,32671,
+40844,35604,41361,32687,
+40844,35603,41357,32689,
+40861,35600,41381,32676,
+40860,35590,41374,32675,
+40843,35595,41358,32675,
+40845,35599,41350,32683,
+40833,35591,41352,32671,
+40857,35586,41361,32674,
+40848,35595,41362,32678,
+40847,35587,41357,32678,
+40842,35606,41352,32692,
+40841,35612,41375,32671,
+40876,35612,41372,32692,
+40873,35634,41379,32695,
+40864,35618,41379,32694,
+40868,35616,41380,32689,
+40864,35607,41369,32690,
+40867,35610,41362,32679,
+40871,35613,41373,32691,
+40860,35604,41364,32672,
+40860,35589,41364,32676,
+40841,35607,41359,32673,
+40859,35588,41355,32676,
+40863,35594,41376,32674,

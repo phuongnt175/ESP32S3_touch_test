@@ -1,0 +1,177 @@
+�����������ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e04
+entry 0x403c9908
+[0;32mI (27) boot: ESP-IDF v5.1.2-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Dec 28 2023 15:56:46[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.1[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0a710h ( 42768) map[0m
+[0;32mI (107) esp_image: segment 1: paddr=0001a738 vaddr=3fc91800 size=028ach ( 10412) load[0m
+[0;32mI (110) esp_image: segment 2: paddr=0001cfec vaddr=40374000 size=0302ch ( 12332) load[0m
+[0;32mI (119) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=196a8h (104104) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000396d0 vaddr=4037702c size=0a778h ( 42872) load[0m
+[0;32mI (159) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (159) boot: Disabling RNG early entropy source...[0m
+[0;32mI (171) cpu_start: Multicore app[0m
+[0;32mI (171) cpu_start: Pro cpu up.[0m
+[0;32mI (171) cpu_start: Starting app cpu, entry point is 0x403752a0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) cpu_start: Application information:[0m
+[0;32mI (192) cpu_start: Project name:     ESP32S3_test_touch_v2[0m
+[0;32mI (199) cpu_start: App version:      1[0m
+[0;32mI (203) cpu_start: Compile time:     Dec 28 2023 15:56:40[0m
+[0;32mI (209) cpu_start: ELF file SHA256:  939cc2f6bf121167...[0m
+[0;32mI (215) cpu_start: ESP-IDF:          v5.1.2-dirty[0m
+[0;32mI (220) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (225) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (230) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (235) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (242) heap_init: At 3FC94910 len 00054E00 (339 KiB): DRAM[0m
+[0;32mI (248) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (255) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (261) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (268) spi_flash: detected chip: generic[0m
+[0;32mI (272) spi_flash: flash io: dio[0m
+[0;33mW (276) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (289) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (296) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (303) app_start: Starting scheduler on CPU0[0m
+[0;32mI (308) app_start: Starting scheduler on CPU1[0m
+[0;32mI (308) main_task: Started on CPU0[0m
+[0;32mI (318) main_task: Calling app_main()[0m
+[0;32mI (318) Touch pad: Initializing touch pad[0m
+[0;32mI (328) Touch pad: Denoise function init[0m
+[0;32mI (328) Touch pad: touch pad filter init[0m
+[0;32mI (338) main_task: Returned from app_main()[0m
+[0;32mI (388) Touch pad: touch pad [14] base 40909, thresh 40[0m
+[0;32mI (388) Touch pad: touch pad [2] base 35646, thresh 35[0m
+[0;32mI (388) Touch pad: touch pad [13] base 41403, thresh 41[0m
+[0;32mI (388) Touch pad: touch pad [5] base 32717, thresh 32[0m
+40920,35649,41401,32710,
+40903,35644,41421,32706,
+40919,35641,41406,32712,
+40901,35633,41399,32722,
+40927,35635,41441,32715,
+40905,35644,41425,32724,
+40901,35629,41424,32703,
+40924,35636,41415,32711,
+40926,35659,41439,32732,
+40925,35654,41432,32731,
+40921,35646,41437,32715,
+40912,35654,41438,32729,
+40935,35663,41439,32731,
+40929,35653,41441,32717,
+40921,35652,41420,32720,
+[0;32mI (3428) Touch pad: TouchSensor [5] be activated, status mask 0x32[0m
+40936,35653,41452,32784,
+40931,35653,41454,32794,
+40943,35646,41446,32854,
+40936,35663,41467,32984,
+40942,35657,41471,33110,
+[0;32mI (4388) Touch pad: TouchSensor [5] be inactivated, status mask 0x0[0m
+40949,35662,41472,32750,
+40919,35649,41505,32751,
+[0;32mI (4708) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40919,35655,41730,32750,
+[0;32mI (4978) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40931,35642,41454,32736,
+40921,35634,41447,32727,
+40918,35638,41476,32728,
+40919,35645,41490,32733,
+40915,35646,41511,32729,
+[0;32mI (5958) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40918,35649,41560,32725,
+40921,35646,41540,32722,
+[0;32mI (6258) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40916,35642,41535,32721,
+[0;32mI (6498) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40912,35637,41554,32715,
+[0;32mI (6698) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40933,35638,41546,32725,
+[0;32mI (6888) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (6958) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40921,35637,41506,32720,
+[0;32mI (7198) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40918,35632,41539,32721,
+[0;32mI (7248) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+[0;32mI (7298) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+[0;32mI (7348) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40925,35649,41485,32720,
+40918,35632,41539,32717,
+[0;32mI (7798) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40941,35652,41561,32725,
+40937,35649,41512,32730,
+[0;32mI (8038) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+[0;32mI (8138) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40953,35650,41623,32739,
+[0;32mI (8298) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+[0;32mI (8398) Touch pad: TouchSensor [13] be activated, status mask 0x8192[0m
+40942,35656,41636,32725,
+[0;32mI (8508) Touch pad: TouchSensor [13] be inactivated, status mask 0x0[0m
+40933,35641,41445,32735,
+40938,35652,41445,32725,
+40942,35644,41450,32745,
+40947,35655,41464,32725,
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e04
+entry 0x403c9908
+[0;32mI (27) boot: ESP-IDF v5.1.2-dirty 2nd stage bootloader[0m
+�&�+
+B������� compile time Dec 28 202�ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e04
+entry 0x403c9908
+[0;32mI (27) boot: ESP-IDF v5.1.2-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Dec 28 2023 15:56:46[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.1[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0a710h ( 42768) map[0m
+[0;32mI (107) esp_image: segment 1: paddr=0001a738 vaddr=3fc91800 size=028ach ( 10412) load[0m
+[0;32mI (110) esp_image: segment 2: paddr=0001cfec vaddr=40374000 size=0302ch ( 12332) load[0m
+[0;32mI (119) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=196a8h (104104) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000396d0 vaddr=4037702c size=0a778h ( 42872) load[0m
+[0;32mI (159) boot: Loaded app from partition at offset 0x10000[0m
+�&�+
+B
