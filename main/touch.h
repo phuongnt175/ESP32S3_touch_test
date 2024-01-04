@@ -35,9 +35,9 @@ typedef struct touch_msg {
 #define TOUCH_CHANGE_CONFIG            0
 
 static const touch_pad_t button[TOUCH_BUTTON_NUM] = {
-    TOUCH_PAD_NUM14,     
-    TOUCH_PAD_NUM2,     
-    TOUCH_PAD_NUM13,   
+    TOUCH_PAD_NUM14,
+    TOUCH_PAD_NUM2,
+    TOUCH_PAD_NUM13,
     TOUCH_PAD_NUM5,
     // If this pad be touched, other pads no response.
 };
@@ -49,9 +49,9 @@ static const touch_pad_t button[TOUCH_BUTTON_NUM] = {
  * If (raw_data - benchmark) < benchmark * threshold, the pad be inactivated.
  */
 static const float button_threshold[TOUCH_BUTTON_NUM] = {
-    0.005, // 20%.  0,5%
-    0.005, // 20%.  0,5%
-    0.005, // 20%.  0,5%
+    0.003, // 20%.  0,3%
+    0.004, // 20%.  0,5%
+    0.003, // 20%.  0,3%
     0.005, // 10%.  0,5%
 };
 // Define LED color enum
@@ -70,6 +70,7 @@ typedef enum {
 typedef struct {
     gpio_num_t redPin;
     gpio_num_t bluePin;
+    gpio_num_t relayPin;
     LedColor currentColor;
 } Led;
 
@@ -81,10 +82,10 @@ typedef struct {
 
 // Create instances for LEDs
 Led leds[TOUCH_BUTTON_NUM] = {
-    {LED_RED_1, LED_BLUE_1, LED_RED},
-    {LED_RED_2, LED_BLUE_2, LED_RED},
-    {LED_RED_3, LED_BLUE_3, LED_RED},
-    {LED_RED_4, LED_BLUE_4, LED_RED}
+    {LED_RED_1, LED_BLUE_1, RL_1, LED_RED},
+    {LED_RED_2, LED_BLUE_2, RL_2, LED_RED},
+    {LED_RED_3, LED_BLUE_3, RL_3, LED_RED},
+    {LED_RED_4, LED_BLUE_4, RL_4, LED_RED}
 };
 
 // Create instances for touch buttons

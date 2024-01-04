@@ -23,8 +23,10 @@ static QueueHandle_t que_touch = NULL;
 uint16_t ledstate = 0x0000;
 
 /**
- * @brief led initialize peripherals
- *
+ * @func led initialize peripherals
+ * 
+ * @brief
+ * 
  * @param none
  */
 void led_init(void)
@@ -58,18 +60,37 @@ void led_init(void)
     gpio_set_direction(RL_2, GPIO_MODE_OUTPUT);
     gpio_set_direction(RL_3, GPIO_MODE_OUTPUT);
     gpio_set_direction(RL_4, GPIO_MODE_OUTPUT);
-
-    gpio_set_level(LED_BLUE_1, 1);
-    gpio_set_level(LED_BLUE_2, 1);
-    gpio_set_level(LED_BLUE_3, 1);
-    gpio_set_level(LED_BLUE_4, 1);
 }
 
-void toggle_led_color(gpio_num_t red_pin, gpio_num_t blue_pin, LedColor *currentColor)
+int find_button_index(gpio_num_t red_pin, gpio_num_t blue_pin)
+{
+    for (int i = 0; i < TOUCH_BUTTON_NUM; i++) {
+        if (leds[i].redPin == red_pin && leds[i].bluePin == blue_pin) {
+            return i;
+        }
+    }
+    return -1;  // Button not found
+}
+
+void toggle_led_color(gpio_num_t red_pin, gpio_num_t blue_pin, LedColor *currentColor, uint16_t *ledstate)
 {
     *currentColor = (*currentColor == LED_RED) ? LED_BLUE : LED_RED;
     gpio_set_level(red_pin, (*currentColor == LED_RED) ? 1 : 0);
     gpio_set_level(blue_pin, (*currentColor == LED_BLUE) ? 1 : 0);
+
+    // Toggle bitmask
+    int button_index = find_button_index(red_pin, blue_pin);
+    if (button_index != -1) {
+        *ledstate ^= (1 << button_index);
+        // Set relay based on LED status
+        if (*currentColor == LED_RED) {
+            // Red LED is on, set relay high
+            gpio_set_level(leds[button_index].relayPin, 1);
+        } else {
+            // Blue LED is on, set relay low
+            gpio_set_level(leds[button_index].relayPin, 0);
+        }
+    }
 }
 
 /*
@@ -94,13 +115,14 @@ static void touchsensor_interrupt_cb(void *arg)
 static void tp_example_set_thresholds(void)
 {
     uint32_t touch_value;
+
     for (int i = 0; i < TOUCH_BUTTON_NUM; i++) {
         //read benchmark value
         touch_pad_read_benchmark(button[i], &touch_value);
         //set interrupt threshold.
         touch_pad_set_thresh(button[i], touch_value * button_threshold[i]);
-        ESP_LOGI(TAG, "touch pad [%d] base %"PRIu32", thresh %"PRIu32,
-                 button[i], touch_value, (uint32_t)(touch_value * button_threshold[i]));
+        // ESP_LOGI(TAG, "touch pad [%d] base %"PRIu32", thresh %"PRIu32,
+        //          button[i], touch_value, (uint32_t)(touch_value * button_threshold[i]));
     }
 }
 
@@ -119,6 +141,16 @@ static void touchsensor_filter_set(touch_filter_mode_t mode)
     ESP_LOGI(TAG, "touch pad filter init");
 }
 
+int find_button_index_from_pad(touch_pad_t pad)
+{
+    for (int i = 0; i < TOUCH_BUTTON_NUM; i++) {
+        if (button[i] == pad) {
+            return i;
+        }
+    }
+    return -1;  // Button not found
+}
+
 static void tp_threshold_read_task(void *pvParameter)
 {
     touch_event_t evt = {0};
@@ -132,23 +164,19 @@ static void tp_threshold_read_task(void *pvParameter)
             continue;
         }
         if (evt.intr_mask & TOUCH_PAD_INTR_MASK_ACTIVE) {
-            ESP_LOGI(TAG, "TouchSensor [%"PRIu32"] be activated, status mask 0x%"PRIu32"", evt.pad_num, evt.pad_status);
+            //ESP_LOGI(TAG, "TouchSensor [%"PRIu32"] be activated, status mask 0x%"PRIu32"", evt.pad_num, evt.pad_status);
 
-            int button_index = -1;
-            for (int i = 0; i < TOUCH_BUTTON_NUM; i++) {
-                if (button[i] == evt.pad_num) {
-                    button_index = i;
-                    break;
-                }
-            }
-
+            // Find the corresponding button
+            int button_index = find_button_index_from_pad(evt.pad_num);
             if (button_index != -1) {
+                //ESP_LOGI(TAG, "Button %d pressed", button_index);
                 // Found the corresponding button
-                toggle_led_color(leds[button_index].redPin, leds[button_index].bluePin, &leds[button_index].currentColor);
+                toggle_led_color(leds[button_index].redPin, leds[button_index].bluePin, &leds[button_index].currentColor, &ledstate);
             }
         }
         if (evt.intr_mask & TOUCH_PAD_INTR_MASK_INACTIVE) {
-            ESP_LOGI(TAG, "TouchSensor [%"PRIu32"] be inactivated, status mask 0x%"PRIu32, evt.pad_num, evt.pad_status);
+            //ESP_LOGI(TAG, "TouchSensor [%"PRIu32"] be inactivated, status mask 0x%"PRIu32, evt.pad_num, evt.pad_status);
+            ESP_LOGI(TAG, "inactive");
         }
         if (evt.intr_mask & TOUCH_PAD_INTR_MASK_SCAN_DONE) {
             ESP_LOGI(TAG, "The touch sensor group measurement is done [%"PRIu32"].", evt.pad_num);
@@ -236,6 +264,5 @@ void app_main(void)
 
     // Start a task to show what pads have been touched
     xTaskCreate(&tp_threshold_read_task, "touch_pad_read_task", 4096, NULL, 5, NULL);
-    xTaskCreate(&touch_read_raw_task, "touch_pad_read_task", 4096, NULL, 6, NULL);
-
+    xTaskCreate(&touch_read_raw_task, "touch_pad_read_raw_task", 4096, NULL, 6, NULL);
 }
