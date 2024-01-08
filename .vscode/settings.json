@@ -1,4 +1,15 @@
 {
     "idf.adapterTargetName": "esp32s3",
-    "C_Cpp.errorSquiggles": "disabled"
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "queue.h": "c",
+        "inttypes.h": "c",
+        "freertos.h": "c",
+        "touch_sensor_hal.h": "c",
+        "touch_sensor_types.h": "c",
+        "soc_caps.h": "c",
+        "array": "c",
+        "string": "c",
+        "string_view": "c"
+    }
 }

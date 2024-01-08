@@ -23,6 +23,20 @@
 #define TOUCH_PIN_3  GPIO_NUM_13
 #define TOUCH_PIN_4  GPIO_NUM_5
 
+// For update touch base
+#define TIME_SCAN_ONE_CHANNEL_IN_UPDATE_BASE_MODE    8
+#define UPDATE_BASE_SUCCESS        2
+#define UPDATE_BASE_CHANGE_STEP    1
+#define UPDATE_BASE_IN_PROGRESS    0
+
+#define TIMES_OF_SMALL_DOWN        4
+#define TIMES_OF_MEDIUM_DOWN       6
+#define TIMES_OF_HIGH_DOWN         4
+
+#define TIMES_OF_SMALL_UP	       5
+#define TIMES_OF_MEDIUM_UP	       6
+#define TIMES_OF_HIGH_UP	       8
+
 typedef struct touch_msg {
     touch_pad_intr_mask_t intr_mask;
     uint32_t pad_num;
@@ -50,9 +64,9 @@ static const touch_pad_t button[TOUCH_BUTTON_NUM] = {
  */
 static const float button_threshold[TOUCH_BUTTON_NUM] = {
     0.003, // 20%.  0,3%
-    0.004, // 20%.  0,5%
+    0.003, // 20%.  0,5%
     0.003, // 20%.  0,3%
-    0.005, // 10%.  0,5%
+    0.003, // 10%.  0,5%
 };
 // Define LED color enum
 typedef enum {
@@ -90,3 +104,21 @@ Led leds[TOUCH_BUTTON_NUM] = {
 
 // Create instances for touch buttons
 TouchButton buttons[TOUCH_BUTTON_NUM];
+
+typedef struct{
+	uint32_t touchValue;
+	uint32_t baseTouchValue;
+	uint16_t deltaTouchValue;
+}TouchParameters_str;
+
+enum TouchEnableUpdateBase_enum{
+	DISABLE_UPDATE_BASE = 0,
+	ENABLE_UPDATE_BASE = 1,
+};
+typedef uint8_t TouchEnableUpdateBase_enum;
+
+enum TouchModuleStatus_enum{
+	NORMAL_MODE,
+	UPDATE_BASE_MODE,
+};
+typedef uint8_t TouchModuleStatus_enum;
